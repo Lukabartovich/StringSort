@@ -102,3 +102,9 @@ class StringSort:
                     (list1[i] == str(sign8)) | (list1[i] == str(sign9)) | (list1[i] == str(sign10)):
                 list1[i] = ''
         return ''.join(list1)
+
+    def alphabetical_order(self):
+        list1 = []
+        list1.extend(self.string)
+        list1.sort()
+        return ''.join(list1)

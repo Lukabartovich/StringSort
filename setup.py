@@ -3,12 +3,13 @@ from setuptools import setup
 setup(
     name='StringSort',
     packages=['StringSort'],
-    version='2.0.0',
+    version='3.0.0',
     license='MIT',
     description='string sorting library',
     author='Luka',
     author_email='app6onpython@gmail.com',
-    keywords=['sort', 'string'],
+    keywords=['sort', 'string', 'StringSort', 'string sort', 'String Sort',
+              'string_sort', 'String_sort'],
     classifiers=[
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
@@ -17,3 +18,6 @@ setup(
         'Programming Language :: Python :: 3.9'
     ]
 )
+
+# python setup.py sdist
+# twine upload --skip-existing dist/*
