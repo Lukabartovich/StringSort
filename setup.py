@@ -3,13 +3,14 @@ from setuptools import setup
 setup(
     name='StringSort',
     packages=['StringSort'],
-    version='3.0.0',
+    version='4.0.0',
     license='MIT',
     description='string sorting library',
     author='Luka',
     author_email='app6onpython@gmail.com',
     keywords=['sort', 'string', 'StringSort', 'string sort', 'String Sort',
-              'string_sort', 'String_sort'],
+              'string_sort', 'String_sort', 'String sort', 'Sort',
+              'String'],
     classifiers=[
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
