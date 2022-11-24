@@ -209,8 +209,9 @@ class StringSort:
                 list1[i] = ' '
         return ''.join(list1)
 
-    def delete_first(self, sign):
-        self.sign = sign
+    def which_one_delete(self, sing, number):
+        self.sign = sing
+        self.number = number
         list1 = []
         list1.extend(str(self.string))
 
@@ -219,13 +220,17 @@ class StringSort:
         for i in range(len(list1)):
             if list1[i] == str(self.sign):
                 num += 1
-                if num == 1:
-                    list1[i] = ''
+                if list1.count(self.sign) >= self.number:
+                    if num == int(self.number):
+                        list1[i] = ''
+                else:
+                    raise SyntaxError(f"your string '{self.string}' don't have {self.number} of '{self.sign}'")
 
         return ''.join(list1)
 
-    def delete_second(self, sign):
-        self.sign = sign
+    def which_one_delete_with_space(self, sing, number):
+        self.sign = sing
+        self.number = number
         list1 = []
         list1.extend(str(self.string))
 
@@ -234,67 +239,10 @@ class StringSort:
         for i in range(len(list1)):
             if list1[i] == str(self.sign):
                 num += 1
-                if num == 2:
-                    list1[i] = ''
-
-        return ''.join(list1)
-
-    def delete_third(self, sign):
-        self.sign = sign
-        list1 = []
-        list1.extend(str(self.string))
-
-        num = 0
-
-        for i in range(len(list1)):
-            if list1[i] == str(self.sign):
-                num += 1
-                if num == 3:
-                    list1[i] = ''
-
-        return ''.join(list1)
-
-    def delete_first_with_space(self, sign):
-        self.sign = sign
-        list1 = []
-        list1.extend(str(self.string))
-
-        num = 0
-
-        for i in range(len(list1)):
-            if list1[i] == str(self.sign):
-                num += 1
-                if num == 1:
-                    list1[i] = ' '
-
-        return ''.join(list1)
-
-    def delete_second_with_space(self, sign):
-        self.sign = sign
-        list1 = []
-        list1.extend(str(self.string))
-
-        num = 0
-
-        for i in range(len(list1)):
-            if list1[i] == str(self.sign):
-                num += 1
-                if num == 2:
-                    list1[i] = ' '
-
-        return ''.join(list1)
-
-    def delete_third_with_space(self, sign):
-        self.sign = sign
-        list1 = []
-        list1.extend(str(self.string))
-
-        num = 0
-
-        for i in range(len(list1)):
-            if list1[i] == str(self.sign):
-                num += 1
-                if num == 3:
-                    list1[i] = ' '
+                if list1.count(self.sign) >= self.number:
+                    if num == int(self.number):
+                        list1[i] = ' '
+                else:
+                    raise SyntaxError(f"your string '{self.string}' don't have {self.number} of '{self.sign}'")
 
         return ''.join(list1)
