@@ -246,3 +246,26 @@ class StringSort:
                     raise SyntaxError(f"your string '{self.string}' don't have {self.number} of '{self.sign}'")
 
         return ''.join(list1)
+
+    def same_signs(self, search_string):
+        list1 = []
+
+        list2 = []
+
+        list1.extend(self.string)
+
+        list2.extend(search_string)
+
+        list3 = []
+
+        if len(list1) <= len(list2):
+            for i in range(len(list2)):
+                if list2[i] != ' ':
+                    for j in list1:
+                        if list2[i] == j:
+                            list3.append(j)
+                            list1.remove(j)
+        else:
+            raise SyntaxError(f"string '{list1}' is bigger than '{list2}'")
+
+        return ', '.join(list3)
