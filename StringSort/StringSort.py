@@ -353,3 +353,21 @@ class StringSort:
             return ''.join(list1)
         else:
             raise SyntaxError(self.string + " don't have '{}', '[]' or '()'")
+
+    def split(self, number_of_signs):
+        list1 = []
+        list1.extend(self.string)
+
+        num = 0
+
+        for i in range(len(list1)):
+            num += 1
+            if num == number_of_signs:
+                if list1[i] != ' ':
+                    list1[i] = list1[i] + '-' + '\n'
+                    num = 0
+                else:
+                    list1[i] = list1[i] + '\n'
+                    num = 0
+
+        return ''.join(list1)
