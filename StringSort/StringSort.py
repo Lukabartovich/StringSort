@@ -362,12 +362,15 @@ class StringSort:
 
         for i in range(len(list1)):
             num += 1
+
             if num == number_of_signs:
-                if list1[i] != ' ':
-                    list1[i] = list1[i] + '-' + '\n'
-                    num = 0
-                else:
-                    list1[i] = list1[i] + '\n'
-                    num = 0
+                if i < len(list1) - 1:
+                    if (list1[i + 1] == ' ') or (list1[i + 1] == '.') or (list1[i + 1] == ',') \
+                            or (list1[i + 1] == '?') or (list1[i + 1] == '!'):
+                        list1[i + 1] = list1[i + 1] + '\n'
+                        num = 0
+                    else:
+                        list1[i] = list1[i] + '-' + '\n'
+                        num = 0
 
         return ''.join(list1)
