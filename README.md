@@ -1,2 +1,2 @@
 # StringSort
-library for sorting strings o n python
+library for sorting strings on python
