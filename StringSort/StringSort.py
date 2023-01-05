@@ -374,3 +374,6 @@ class StringSort:
                         num = 0
 
         return ''.join(list1)
+
+    def __repr__(self):
+        return self.string
