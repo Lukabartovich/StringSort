@@ -7,25 +7,24 @@ class StringSort:
     def __init__(self, string):
         self.string = string
 
-    def delete(self, list_of_signs):
-        list1 = []
-        list1.extend(self.string)
+    def delete(self, strToDelete):
+        newStr = ''
+        for char in self.string:
+            if char in strToDelete:
+                continue
+            newStr += char
 
-        for sign in range(len(list1)):
-            if list1[sign] in list_of_signs:
-                list1[sign] = ''
+        return newStr
 
-        return ''.join(list1)
+    def delete_with_space(self, strToDelete):
+        newStr = ''
+        for char in self.string:
+            if char in strToDelete:
+                newStr = newStr + ' '
+                continue
+            newStr += char
 
-    def delete_with_space(self, list_of_signs):
-        list1 = []
-        list1.extend(self.string)
-
-        for sign in range(len(list1)):
-            if list1[sign] in list_of_signs:
-                list1[sign] = ' '
-
-        return ''.join(list1)
+        return newStr
 
 
     def alphabetical_order(self):
