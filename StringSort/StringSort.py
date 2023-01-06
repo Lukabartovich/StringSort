@@ -7,126 +7,26 @@ class StringSort:
     def __init__(self, string):
         self.string = string
 
-    def delete(self, delete):
-        """method to delete one sign from string"""
-
-        self.delete = delete
+    def delete(self, list_of_signs):
         list1 = []
-        list1.extend(str(self.string))
+        list1.extend(self.string)
 
-        for i in range(len(list1)):
-            if list1[i] == str(self.delete):
-                list1[i] = ''
+        for sign in range(len(list1)):
+            if list1[sign] in list_of_signs:
+                list1[sign] = ''
+
         return ''.join(list1)
 
-    def delete_2_symbols(self, sign1, sign2):
-        """method to delete two sign from string"""
-
+    def delete_with_space(self, list_of_signs):
         list1 = []
-        list1.extend(str(self.string))
+        list1.extend(self.string)
 
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)):
-                list1[i] = ''
+        for sign in range(len(list1)):
+            if list1[sign] in list_of_signs:
+                list1[sign] = ' '
+
         return ''.join(list1)
 
-    def delete_3_symbols(self, sign1, sign2, sign3):
-        """method to delete three sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_4_symbols(self, sign1, sign2, sign3, sign4):
-        """method to delete four sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (
-                    list1[i] == str(sign4)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_5_symbols(self, sign1, sign2, sign3, sign4, sign5):
-        """method to delete five sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_6_symbols(self, sign1, sign2, sign3, sign4, sign5, sign6):
-        """method to delete six sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_7_symbols(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7):
-        """method to delete seven sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_8_symbols(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8):
-        """method to delete eight sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)) | \
-                    (list1[i] == str(sign8)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_9_symbols(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9):
-        """method to delete nine sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)) | \
-                    (list1[i] == str(sign8)) | (list1[i] == str(sign9)):
-                list1[i] = ''
-        return ''.join(list1)
-
-    def delete_10_symbols(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9, sign10):
-        """method to delete ten sign from string"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)) | \
-                    (list1[i] == str(sign8)) | (list1[i] == str(sign9)) | (list1[i] == str(sign10)):
-                list1[i] = ''
-        return ''.join(list1)
 
     def alphabetical_order(self):
         """string in alphabetical order"""
@@ -134,127 +34,6 @@ class StringSort:
         list1 = []
         list1.extend(self.string)
         list1.sort()
-        return ''.join(list1)
-
-    def delete_with_space(self, delete):
-        """method to delete one sign from string with space"""
-
-        self.delete = delete
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if list1[i] == str(self.delete):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_2_symbols_with_space(self, sign1, sign2):
-        """method to delete two sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_3_symbols_with_space(self, sign1, sign2, sign3):
-        """method to delete three sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_4_symbols_with_space(self, sign1, sign2, sign3, sign4):
-        """method to delete four sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (
-                    list1[i] == str(sign4)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_5_symbols_with_space(self, sign1, sign2, sign3, sign4, sign5):
-        """method to delete five sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_6_symbols_with_space(self, sign1, sign2, sign3, sign4, sign5, sign6):
-        """method to delete six sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_7_symbols_with_space(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7):
-        """method to delete seven sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_8_symbols_with_space(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8):
-        """method to delete eight sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)) | \
-                    (list1[i] == str(sign8)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_9_symbols_with_space(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9):
-        """method to delete nine sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)) | \
-                    (list1[i] == str(sign8)) | (list1[i] == str(sign9)):
-                list1[i] = ' '
-        return ''.join(list1)
-
-    def delete_10_symbols_with_space(self, sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9, sign10):
-        """method to delete ten sign from string with space"""
-
-        list1 = []
-        list1.extend(str(self.string))
-
-        for i in range(len(list1)):
-            if (list1[i] == str(sign1)) | (list1[i] == str(sign2)) | (list1[i] == str(sign3)) | (list1[i] == str(sign4)) \
-                    | (list1[i] == str(sign5)) | (list1[i] == str(sign6)) | (list1[i] == str(sign7)) | \
-                    (list1[i] == str(sign8)) | (list1[i] == str(sign9)) | (list1[i] == str(sign10)):
-                list1[i] = ' '
         return ''.join(list1)
 
     def which_one_delete(self, sing, number):
