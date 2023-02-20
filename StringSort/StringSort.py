@@ -20,8 +20,12 @@ class StringSort:
         newStr = ''
         for char in self.string:
             if char in strToDelete:
-                newStr = newStr + ' '
-                continue
+                if self.string[0] == char:
+                    newStr = newStr
+                    continue
+                else:
+                    newStr = newStr + ' '
+                    continue
             newStr += char
 
         return newStr
