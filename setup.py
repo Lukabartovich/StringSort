@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='StringSort',
     packages=['StringSort'],
-    version='10.0.2',
+    version='10.0.3',
     license='MIT',
     description='string sorting library',
     author='Luka',

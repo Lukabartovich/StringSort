@@ -7,14 +7,24 @@ class StringSort:
     def __init__(self, string):
         self.string = string
 
-    def delete(self, strToDelete):
-        newStr = ''
-        for char in self.string:
-            if char in strToDelete:
-                continue
-            newStr += char
+    def delete(self, strToDelete, second_sign = None):
+        if second_sign:
+            newStr = ''
+            for i in range(0, len(self.string)):
+                if self.string[i] in strToDelete and i < len(self.string) - 1 and\
+                        self.string[i + 1] == str(second_sign):
+                    continue
+                newStr += self.string[i]
 
-        return newStr
+            return newStr
+        else:
+            newStr = ''
+            for char in self.string:
+                if char in strToDelete:
+                    continue
+                newStr += char
+
+            return newStr
 
     def delete_with_space(self, strToDelete):
         newStr = ''
